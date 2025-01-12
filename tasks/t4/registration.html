@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registration Page</title>
+</head>
+<body bgcolor="aliceblue">
+    <center>
+        <h1><font color="forestgreen">Registration Form</font></h1>
+    </center>
+    <form action="submit.html" method="post">
+        <table border="0" width="70%" cellpadding="10" cellspacing="0" align="center" bgcolor="white">
+            <tr>
+                <td align="right"><font color="indigo"><b>First Name:</b></font></td>
+                <td><input type="text" name="fname"></td>
+            </tr>
+            <tr>
+                <td align="right"><font color="indigo"><b>Last Name:</b></font></td>
+                <td><input type="text" name="lname"></td>
+            </tr>
+            <tr>
+                <td align="right"><font color="indigo"><b>Email:</b></font></td>
+                <td><input type="email" name="email"></td>
+            </tr>
+            <tr>
+                <td align="right"><font color="indigo"><b>Date of Birth:</b></font></td>
+                <td><input type="date" name="dob"></td>
+            </tr>
+            <tr>
+                <td align="right"><font color="indigo"><b>Gender:</b></font></td>
+                <td>
+                    <input type="radio" name="gender" value="male"> Male
+                    <input type="radio" name="gender" value="female"> Female
+                </td>
+            </tr>
+            <tr>
+                <td align="right"><font color="indigo"><b>Qualification:</b></font></td>
+                <td>
+                    <table width="40%" cellpadding="5" cellspacing="0" border="1" bordercolor="lightblue">
+                        <tr bgcolor="lightblue">
+                            <td><b>Level</b></font></td>
+                            <td><b>Percentage/CGPA</b></font></td>
+                        </tr>
+                        <tr>
+                            <td>Class X:</td>
+                            <td><input type="text" name="X"></td>
+                        </tr>
+                        <tr>
+                            <td>Class XII:</td>
+                            <td><input type="text" name="XII"></td>
+                        </tr>
+                        <tr>
+                            <td>University:</td>
+                            <td><input type="text" name="uni"></td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td align="right"><font color="indigo"><b>Interests:</b></font></td>
+                <td>
+                    <input type="checkbox" name="interests" value="coding"> Coding
+                    <input type="checkbox" name="interests" value="reading"> Reading
+                    <input type="checkbox" name="interests" value="sports"> Sports
+                    <input type="checkbox" name="interests" value="others"> Others (Please specify):
+                    <input type="text" name="other_interests">
+                </td>
+            </tr>
+            <tr>
+                <td align="right"><font color="indigo"><b>Phone Number:</b></font></td>
+                <td><input type="tel" name="phno"></td>
+            </tr>
+            <tr>
+                <td align="right"><font color="indigo"><b>Address:</b></font></td>
+                <td><textarea name="adr" rows="4" cols="50"></textarea></td>
+            </tr>
+            <tr>
+                <td align="right"><font color="indigo"><b>City:</b></font></td>
+                <td><input type="text" name="city"></td>
+            </tr>
+            <tr>
+                <td align="right"><font color="indigo"><b>State:</b></font></td>
+                <td><input type="text" name="state"></td>
+            </tr>
+            <tr>
+                <td align="right"><font color="indigo"><b>Country:</b></font></td>
+                <td><input type="text" name="country"></td>
+            </tr>
+            <tr>
+                <td align="right"><font color="indigo"><b>Pincode:</b></font></td>
+                <td><input type="number" name="pincode"></td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center">
+                    <input type="submit" value="Submit">
+                    <input type="reset" value="Reset">
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
