@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>VIT</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+
+        header {
+            background-color: #002147;
+            width: 100%;
+        }
+
+        .vit-logo {
+            padding-left: 10vw;
+            padding-top: 10px;
+            padding-bottom: 10px;
+
+        }
+
+        header div {
+            color: white;
+            display: inline-block;
+            vertical-align: middle;
+            justify-content: space-between;
+            padding: 5px;
+            font-weight: bold;
+            font-size: 15px;
+        }
+
+        .first {
+            margin-left: 20px;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        .content {
+            margin: 20px;
+            width: 100%;
+            display: flex;
+            margin-left: auto;
+            margin-right: auto;
+            justify-content: center;
+        }
+
+        .box {
+            margin: 10px;
+            width: 25vw;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.479);
+            border-radius: 5px;
+            border: 1px solid #352e2e;
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        .dot {
+            margin-left: auto;
+            margin-right: auto;
+            height: 50px;
+            width: 50px;
+            margin-top: 20px;
+            background-color: #002147;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        a{
+            text-decoration: none;
+            color: #004C93;
+        }
+        a:hover{
+            color: rgb(249, 191, 84);
+        }
+        .box h3{
+            text-align: center;
+            color: #002147;
+        }
+        .box ul li {
+            margin: 5px 15px;
+        }
+        .box p{
+            padding: 15px;
+        }
+        .admission-enquiry {
+            position: fixed;
+            right: -60px;
+            top: 50%;
+            transform: translateY(-50%) rotate(-90deg);
+            background-color: #ffcc00;
+            padding: 9px;
+            border-radius: 5px;
+            text-align: center;
+            font-weight: bold;
+        }
+        .admission-enquiry:hover {
+            background-color: #ff9900;
+        }
+        .popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: #002147;
+            color: white;
+            padding: 20px;
+            width: 33vw;
+            border: 2px solid #ccc;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .popup:target {
+            display: block;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        form label {
+            margin: 10px 0 5px;
+            font-size: 14px;
+        }
+        form input,form select {
+            padding: 8px;
+            font-size: 14px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            padding: 10px 15px;
+            font-size: 14px;
+            border: none;
+            border-radius: 4px;
+            margin-top: 8px;
+            width: 48%;
+        }
+        .send-btn {
+            background-color: #28a745;
+            color: #fff;
+        }
+        .close-btn {
+            background-color: #dc3545;
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="vit-logo"><a href="https://vit.ac.in/"><img src="vit.png" alt="VIT" width="200"></a></div>
+        <div class="first">Home</div>
+        <div>About</div>
+        <div>Academics</div>
+        <div>Admissions</div>
+        <div>CDC</div>
+        <div>International</div>
+        <div>Research</div>
+        <div>Campus Life</div>
+    </header>
+    <h2>A place to learn, A chance to grow</h2>
+    <div class="content">
+        <div class="box">
+            <span class="dot"><img src="note.png" alt="raricon" width="30"></span>
+            <h3>RANKING AND RECOGNITION</h3>
+            <ul>
+                <li><a href="https://vit.ac.in/vit-rank/">VIT National & Global Rankings</a></li>
+                <li><a href="https://vit.ac.in/ariia-ranking/">ARIIA Ranking Govt. of India.</a></li>
+                <li><a href="https://vit.ac.in/ranking-and-recognition/">VIT 212th Best Institution of the world in the Engineering and Technology</a></li>
+                <li>VIT is one among the top 2 in india and within 501-600 universities of the world as per <a href="https://vit.ac.in/vit-rank/">Shanghai
+                    ARWU (Academic Ranking of World Universities) 2024</a></li>
+            </ul>
+        </div>
+        <div class="box">
+            <span class="dot"><img src="gcap.png" alt="gcap" width="40"></span>
+            <h3>PLACEMENTS</h3>
+            <ul>
+                <li>2409+ <a href="https://vit.ac.in/cdc-highlights/">Dream Offers</a>, 2027+ <a href="https://vit.ac.in/cdc-highlights/">Super Dream Offers</a></li>
+                <li>873+ <a href="https://vit.ac.in/cdc-highlights/">Dream & Super Dream Internship offers</a></li>
+                <li>1798+ Regular Offers</li>
+                <li><a href="https://vit.ac.in/cdc-overview/">12508+ Over all Offers</a></li>
+                <li>Limca Book of Records for the 10th time for unbeatable placement records.</li>
+                <li>Highest CTC: 75.00 Lakhs per annum</li>
+                <li>771 Number of Companies</li>
+            </ul>
+        </div>
+        <div class="box">
+            <span class="dot"><img src="earth.png" alt="earth" width="40"></span>
+            <h3>INTERNATIONAL RELATIONS</h3>
+            <p>VIT has strong international presence across the <a href="https://vit.ac.in/internationalrelations/partneruniversities/">world and partnerships with over 500 foreign
+                universities</a>. VIT provides a platform for students and faculty to connect with international experts and
+                collaborate on projects involving cutting-edge technologies. VIT provides options to study part of their
+                academic program in VIT and continue the remaining tenure in a partner foreign university.</p>
+        </div>
+    </div>
+    <div class="admission-enquiry"><a href="#popup">Admission Enquiry</a></div>
+    <div class="popup" id="popup">
+        <form>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="Your Name" required>
+    
+            <label for="mobile">Mobile Number:</label>
+            <input type="text" id="mobile" name="mobile" placeholder="Your Mobile Number" required>
+    
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Your Email" required>
+    
+            <label for="programmes">Programmes Offered:</label>
+            <select id="programmes" name="programmes" required>
+                <option value="" disabled selected>Select a programme</option>
+                <option value="cse">Computer Science and Engineering</option>
+                <option value="ee">Electrical Engineering</option>
+                <option value="me">Mechanical Engineering</option>
+                <option value="ce">Civil Engineering</option>
+                <option value="ece">Electronics and Communication Engineering</option>
+                <option value="che">Chemical Engineering</option>
+                <option value="it">Information Technology</option>
+                <option value="ae">Aerospace Engineering</option>
+                <option value="bt">Biotechnology</option>
+                <option value="mt">Mechatronics</option>
+            </select>
+    
+            <div class="button-group">
+                <button type="submit" class="send-btn">Send Message</button>
+                <a href="#close"><button type="button" class="close-btn">Close</button></a>
+            </div>
+        </form>
+    </div>
+</html>
