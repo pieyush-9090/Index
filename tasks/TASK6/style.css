@@ -1,0 +1,151 @@
+body {
+    margin: 0;
+    font-family: "Arial", sans-serif;
+}
+header {
+    background-color: #121921;
+    color: white;
+    padding: 10px 20px;
+    width: 100%;
+}
+.logo,.location, .search-bar,.button,.account,.acct-link {
+    display: inline-block; 
+    vertical-align: top; 
+    align-items: end;
+}
+.location {
+    font-size: small;
+    text-align: center;
+    padding-left: 15px;
+}
+.location span {
+    color: rgba(255, 255, 255, 0.664);
+}
+.search-bar {
+    margin-left: 15px;
+}
+.dropdown {
+    height: 38px;
+    width: 70px;
+    background-color: #f3f3f3;
+    border: 1px solid #ccc;
+    padding: 0 8px;
+    font-size: 14px;
+    margin-right: -5px;
+    border-radius: 4px 0 0 4px;
+}
+.search {
+    height: 36px;
+    width: 45vw;
+    font-size: 14px;
+    padding: 0 10px;
+    border: 1px solid #ccc;
+    margin-right: -5px;
+}
+.button {
+    height: 38px;
+    width: 40px;
+    background-color: #ffa837;
+    border: 1px solid #ccc;
+    border-radius: 0 4px 4px 0;
+}
+.account {
+    font-size: 15px;
+    align-items: end;
+}
+.lang {
+    display: inline-block;
+    margin-left: 15px;
+    margin-right: 15px;
+    font-size: 14px;
+}
+.lang img {
+    width: 20px;
+    margin-left: 5px;
+}
+.account b {
+    font-size: 14px;
+    display: block;
+}
+nav{
+    background-color: #232f3f;
+    color: white;
+    width: 100vw;
+    padding: 12px;   
+    justify-content: space-between; 
+    vertical-align: middle;            
+}  
+nav a{
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+
+}
+.container{
+    display: flex;
+}
+.sidebar{
+    padding: 20px;
+    width: 15vw;
+    height: 100;
+    border-right: 2px solid rgba(128, 128, 128, 0.327);
+
+}
+.nav2{
+    padding: 10px 20px;
+    border-bottom: 2px solid rgba(150, 150, 150, 0.33);
+}
+.nav2 a{
+    text-decoration: none;
+    margin: 0 10px;
+}
+.nav2 a:hover{
+    border-bottom:3px solid #ffa228;
+}
+h1,h2{
+    padding-left: 15px;
+}
+.sidebar a{
+    color: black;
+    text-decoration: none;
+    margin: 0 10px;
+
+}
+.sidebar a:hover{
+    border-bottom: 1px solid #555;
+
+}
+.productpage {
+    display: inline-block;
+    width: 100%;
+}   
+.product {
+    background-color: white;
+    padding: 20px;
+    margin: 10px;
+    width: 250px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    display: inline-block;
+    vertical-align: middle;
+}
+.product img {
+    width: 100%;
+    border-radius: 5px;
+}
+.product h2 {
+    font-size: 20px;
+    margin: 10px 0;
+}
+.product p {
+    font-size: 14px;
+    color: #555;
+}
+.product .price {
+    color: #b12704;
+    font-size: 18px;
+}
+.product .rating {
+    color: #ffa41c;
+    font-size: 14px;
+}
