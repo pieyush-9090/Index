@@ -1,0 +1,203 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+            background: #4338ca;
+        }
+        .calchead {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        .calchead img {
+            height: 30px;
+            margin-left: 20px;
+        }
+        .calchead h3 {
+            margin: 0;
+            font-size: 22px;
+            margin-right: 20px;
+            font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+        .calculator{
+            background-color: #202938;
+            padding: 20px;
+            border-radius: 10px;
+            display: inline-block;
+            box-shadow: #202938;
+            color: white;
+        }
+        .display,.expression {
+            width: 90%;
+            background-color: #111827;
+            color: white;
+            padding: 15px;
+            border: none;
+            border-radius: 10px;
+            margin-bottom: 8px;
+            text-align: right;
+            font-size: 24px;
+            font-family: monospace;
+        }
+        .display{
+            color: #1ac22b;
+        }
+        button{
+            background-color: #4c5564;
+            color: white;
+            height: 55px;
+            width: 55px;
+            padding: 15px;
+            border: none;
+            margin: 8px;
+            text-align: center;
+            border-radius: 10px;
+            font-size: large;
+            cursor: pointer;
+            
+        }
+        .func{
+            background-color: #7b3aec;
+        }
+        .op{
+            background-color: #5046e5;
+        }
+        .eq{
+            background-color: #1ac22b;
+        }
+        .clr{
+            background-color: red;
+        }
+        button:hover {
+            background-color: #374151;
+        }
+        .op:hover {
+            background-color: #4338ca;
+        }.func:hover {
+            background-color: #6d28d9;
+        }.eq:hover {
+            background-color: #047857;
+        }.clr:hover {
+            background-color: #b91c1c;
+        }
+    </style>
+</head>
+<body>
+    <div class="calculator">
+        <div class="calchead">
+            <img src="calc.png" alt="logo"> 
+            <h3>Calculator</h3>
+        </div>
+        <input type="text" class="expression" id="expression" readonly value="" placeholder="Expression"> <br>
+        <input type="text" class="display" id="display" readonly value="0"><br>
+        <button class="func" onclick="square()">x²</button>
+        <button class="func" onclick="cube()">x³</button>
+        <button class="func" onclick="sqrt()">√x</button>
+        <button class="clr" onclick="clr()">C</button>
+        <br>
+        <button class="num" onclick="addNum('7')">7</button>
+        <button class="num" onclick="addNum('8')">8</button>
+        <button class="num" onclick="addNum('9')">9</button>
+        <button class="op" onclick="setop('/')">/</button>
+        <br>
+        <button class="num" onclick="addNum('4')">4</button>
+        <button class="num" onclick="addNum('5')">5</button>
+        <button class="num" onclick="addNum('6')">6</button>
+        <button class="op" onclick="setop('*')">×</button>
+        <br>
+        <button class="num" onclick="addNum('1')">1</button>
+        <button class="num" onclick="addNum('2')">2</button>
+        <button class="num" onclick="addNum('3')">3</button>
+        <button class="op" onclick="setop('-')">-</button>
+        <br>
+        <button class="num" onclick="addNum('0')">0</button>
+        <button class="num" onclick="addNum('.')">.</button>
+        <button class="eq" onclick="calculate()">=</button>
+        <button class="op" onclick="setop('+')">+</button>
+    </div>
+    <script>
+        var dispNum = '0';
+        var prevNum = null;
+        var op = null;
+        var newNum = null;
+        var expression = '';
+
+        function update() {
+            document.getElementById("display").value = dispNum;
+            document.getElementById("expression").value = expression;
+        }
+    
+        function addNum(num) {
+            if (newNum) {
+                dispNum = num;
+            } else {
+                dispNum = dispNum === '0' ? num : dispNum + num;
+            }
+            expression += num;
+            newNum = false;
+            update();
+        }
+    
+        function setop(opr) {
+            if (op !== null) {
+                calculate();
+            }
+            prevNum = Number(dispNum);
+            expression += opr;
+            op = opr;
+            newNum = true;
+        }
+    
+        function calculate() {
+            if (prevNum === null || op === null) return;
+            var current = Number(dispNum);
+            var result;
+            switch (op) {
+                case '+': result = prevNum + current; break;
+                case '-': result = prevNum - current; break;
+                case '*': result = prevNum * current; break;
+                case '/': result = prevNum / current; break;
+            }
+            dispNum = result.toString();
+            prevNum = null;
+            op = null;
+            newNum = true;
+            update();
+        }
+    
+        function square() {
+            dispNum = (Number(dispNum) ** 2).toString();
+            expression += "^2";
+            update();
+        }
+    
+        function cube() {
+            dispNum = (Number(dispNum) ** 3).toString();
+            expression += "^3";
+            update();
+        }
+    
+        function sqrt() {
+            dispNum = Math.sqrt(Number(dispNum)).toString();
+            expression += "^3";
+            update();
+        }
+    
+        function clr() {
+            dispNum = '0';
+            prevNum = null;
+            op = null;
+            newNum = true;
+            expression = '';
+            update();
+        }
+    </script>
+</body>
+</html>
